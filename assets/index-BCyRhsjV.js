@@ -175,20 +175,20 @@
       </div>
       ${m(`vulnerability-select`,n,i.vulnerabilityKey)}
     </section>
-    <div class="two-column">
-      <article class="panel">
-        <div class="panel-title">
-          <h3>Respuesta general</h3>
-          <p>${s(e.vulnerability.definition)}</p>
-        </div>
-        ${h(e.vulnerability.summary,`vulneración`)}
-      </article>
+    <div class="vulnerability-stack">
       <article class="panel">
         <div class="panel-title">
           <h3>Lectura por ${s(t.label.toLowerCase())}</h3>
           <p>La base no incluye detalle por tipo específico de violencia o discriminación.</p>
         </div>
         ${C(e.cross[i.vulnerabilityKey]??[])}
+      </article>
+      <article class="panel">
+        <div class="panel-title">
+          <h3>Respuesta general</h3>
+          <p>${s(e.vulnerability.definition)}</p>
+        </div>
+        ${h(e.vulnerability.summary,`vulneración`)}
       </article>
     </div>
   `}function C(e){return`
@@ -246,9 +246,9 @@
   `}function T(){return i.tab===`intersecciones`?y():i.tab===`vulneracion`?S():i.tab===`metodologia`?w():v()}function E(){o.innerHTML=`
     <header class="dashboard-header">
       <div class="header-copy">
-        <p class="eyebrow">Proyecto CRECE · Componente 1110</p>
+        <p class="eyebrow">Proyecto CRECE</p>
         <h1>Perfil de interseccionalidad de la población beneficiaria</h1>
-        <p>Lectura agregada de la base oficial del examen con enfoque de derechos humanos, género e interseccionalidad.</p>
+        <p>Propuesta de dashboard para responder a la pregunta 2 del Examen Técnico - Consultoría M&E.</p>
       </div>
       <div class="source-chip">
         <span>${e.metadata.n}</span>
@@ -259,7 +259,6 @@
     ${p()}
     <main class="content" aria-live="polite">${T()}</main>
     <footer class="site-footer">
-      <span>Código CAND-1589. Prueba técnica para la posición de asociado de programa con experiencia en monitoreo y evaluación del proyecto CRECE.</span>
-      <span>19 de junio de 2026.</span>
+      <span>Postulante con código CAND-1589, 19 de junio de 2026.</span>
     </footer>
   `,document.querySelectorAll(`[data-tab]`).forEach(e=>{e.addEventListener(`click`,()=>{i.tab=e.dataset.tab,E()})}),document.querySelector(`#profile-select`)?.addEventListener(`change`,e=>{i.profileKey=e.target.value,E()}),document.querySelector(`#cross-select`)?.addEventListener(`change`,e=>{i.crossKey=e.target.value,E()}),document.querySelector(`#vulnerability-select`)?.addEventListener(`change`,e=>{i.vulnerabilityKey=e.target.value,E()})}E();

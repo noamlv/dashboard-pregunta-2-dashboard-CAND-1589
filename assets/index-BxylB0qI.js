@@ -179,7 +179,6 @@
       <article class="panel">
         <div class="panel-title">
           <h3>Lectura por ${s(t.label.toLowerCase())}</h3>
-          <p>La base no incluye detalle por tipo específico de violencia o discriminación.</p>
         </div>
         ${C(e.cross[i.vulnerabilityKey]??[])}
       </article>
